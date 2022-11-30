@@ -1,0 +1,10 @@
+<section class="phx-hero">
+  <h1><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h1>
+  <p>
+  <.link href={Routes.o_auth_path(OktaTestWeb.Endpoint, :request, "okta")}
+    class="btn mt-5 w-full bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90">
+    Sign In
+  </.link>
+  </p>
+</section>
+
