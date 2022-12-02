@@ -48,8 +48,7 @@ defmodule OktaTest.MixProject do
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
       {:ueberauth, "~> 0.10.3"},
-      {:ueberauth_okta,
-       git: "https://github.com/jjcarstens/ueberauth_okta", branch: "fix-runtime"}
+      {:ueberauth_okta, "~> 1.0"}
     ]
   end
 

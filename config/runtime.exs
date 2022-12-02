@@ -1,16 +1,5 @@
 import Config
 
-config :ueberauth, Ueberauth,
-  providers: [
-    okta:
-      {Ueberauth.Strategy.Okta,
-       [
-         client_id: System.get_env("OKTA_CLIENT_ID"),
-         client_secret: System.get_env("OKTA_CLIENT_SECRET"),
-         site: System.get_env("OKTA_SITE")
-       ]}
-  ]
-
 # config/runtime.exs is executed for all environments, including
 # during releases. It is executed after compilation and before the
 # system starts, so it is typically used to load production configuration

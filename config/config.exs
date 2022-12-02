@@ -47,12 +47,14 @@ config :phoenix, :json_library, Jason
 config :ueberauth, Ueberauth,
   base_path: "/oauth",
   providers: [
-    okta: {
-      Ueberauth.Strategy.Okta,
-      [
-        oauth2_params: [scope: "openid email"]
-      ]
-    }
+    okta:
+      {Ueberauth.Strategy.Okta,
+       [
+         oauth2_params: [scope: "openid email"],
+         client_id: {System, :get_env, ["OKTA_CLIENT_ID"]},
+         client_secret: {System, :get_env, ["OKTA_CLIENT_SECRET"]},
+         site: {System, :get_env, ["OKTA_SITE"]}
+       ]}
   ]
 
 # Import environment specific config. This must remain at the bottom
